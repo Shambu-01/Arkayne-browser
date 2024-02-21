@@ -1,0 +1,17 @@
+<div class="main" [ngClass]="{'dark':isDark}">
+  <button (click)="change()">{{ isDark ? 'Light Mode':'Dark Mode'}}</button>
+  
+  <h1>Arkayne Browser</h1>
+  <!-- <div [ngStyle]="{'display' :isSuccess?'none':'block'}">
+  </div> -->
+  
+  <input type="text" placeholder="Enter the Movie" [(ngModel)]="st">
+  <button (click)="search()">Search</button>
+  <div class="movies">
+    <div class="movie" *ngFor="let m of movies">
+      <img src={{m.Poster}} alt="{{m.Title}}">
+      <h2>{{m.Title}}</h2>
+      <p>Released: <strong>{{m.Year}}</strong></p>
+    </div>
+</div>
+</div>
